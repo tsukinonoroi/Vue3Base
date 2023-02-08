@@ -19,6 +19,8 @@
     text1: 'привет',
     cost: 200500,
     amount: 9000,
+    visible: true,
+    visible1: false,
 
 	}
 },
@@ -85,6 +87,8 @@ change: function(){
     <button @click="change3">Меняем значение cost на 20</button>
     <a class="inline-link-1" href="https://vk.com/playboiibunny" onclick="event.preventDefault()">Не сработает</a>
     <a @click.once="shor">Сработает один раз</a>
+    <p v-if="visible">Показан</p>
+    <p v-if="visible1">Не показан</p>
   </div>
 </template>
 
