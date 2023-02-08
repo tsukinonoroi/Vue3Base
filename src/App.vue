@@ -38,7 +38,7 @@ methods: {
     <p class="sc"> Вывод каждой буквы из массива по абзацам: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br>  
       Вывод суммы элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
       <p class="b">Вывод суммы элементов массива obj : {{ obj.x + obj.y + obj.z }} </p>
-      <button class="button button1" @click="show">Узнать дату(нажатие)</button> 
+      <button class="button button1" @click="show">Узнать дату(нажатием)</button> 
     <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
   </div>
 </template>
@@ -47,15 +47,31 @@ methods: {
 header {
   line-height: 1.5;
 }
+.button {
+    background-color: #03f2ea; 
+    border-radius: 8px;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.7s; 
+    transition-duration: 0.7s;
+}
+
 .button1 {
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:red
+  color:rgb(162, 0, 255)
 }
 .button2 {
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color:green
+  color:rgb(245, 12, 160)
 }
 .b {
   font-size:medium;
