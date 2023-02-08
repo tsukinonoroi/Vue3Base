@@ -6,6 +6,10 @@
 		surn: 'assassin',
     attr: 'pa.jpg',
     text: 'page',
+    num: 5,
+    num1: 1,
+		num2: 2,
+		num3: 3,
 	}
 }
   }
@@ -19,6 +23,7 @@
   <img :src="attr">
   <div> <p> Hello, my name is {{ name }} {{ surn }}</p>
     <p>What about <a href="page.html"> me? </a></p>
+    <p class="sc">Квадрат свойства num равен "{{num*num}}", А сумма num1,num2,num3 равна "{{num1+num2+num3}}".</p>
   </div>
 </template>
 
