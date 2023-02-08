@@ -67,7 +67,7 @@ change: function(){
   <br>
   <img :src="attr">
   <div> <p> Hello, i'm {{ name }} {{ surn }}</p>
-    <p>Значение cost = {{ cost }}, Прайс = {{ price }}</p>
+    <p>Значение cost = {{ cost }}, amount = {{ amount  }},Прайс = {{ price }}</p>
     <p>What about <a href="page.html">me?</a></p> <br>
     <p class="sc">Квадрат числа num = {{num*num}}, А сумма чисел num1,num2,num3 = {{num1+num2+num3}}.</p>
     <p class="sc"> Вывод каждой буквы из массива по абзацам: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br>  
