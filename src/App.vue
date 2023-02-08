@@ -13,6 +13,7 @@
 		num3: 3,
     arr1: ['x', 'y', 'z'], 
     arr2: [1, 2, 3], 
+    obj: {x: 1, y: 2, z: 3},
 	}
 }
   }
@@ -29,12 +30,18 @@
     <p class="sc">Квадрат числа num = {{num*num}}, А сумма чисел num1,num2,num3 = {{num1+num2+num3}}.</p>
     <p class="sc"> Вывод каждой буквы из массива по абзацам: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br>  
       Вывод суммы элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
+      <p class="b">Вывод суммы элементов массива obj : {{ obj.x + obj.y + obj.z }} </p>
   </div>
 </template>
 
 <style >
 header {
   line-height: 1.5;
+}
+.b {
+  font-size:medium;
+  color:cornflowerblue;
+  font-family: 'Lucida Sans', Geneva, Verdana, sans-serif;
 }
 .sc {
   font-size: medium;
