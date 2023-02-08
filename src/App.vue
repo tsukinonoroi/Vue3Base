@@ -14,19 +14,23 @@
     arr1: ['x', 'y', 'z'], 
     arr2: [1, 2, 3], 
     obj: {x: 1, y: 2, z: 3},
+    text: 'hellooooooo iwannafly'
 	}
 },
 methods: { 
  show: function() { 
   alert(today); 
+ },
+ summ: function() {
+  alert(this.num1 + this.num2)
  }
 }
-  }
-  let today = new Date();   
-
+}
+  let today = new Date(); 
 </script>
 
 <template>
+  {{ summ() }}
   <div>
 		<h1> I'm doing vue project </h1>
 	</div>
