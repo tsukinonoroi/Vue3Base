@@ -24,7 +24,7 @@ methods: {
  summ: function() {
   alert(this.num1 + this.num2)
  },
- data: function(){
+data: function(){
 let date = this.dayOfWeek(this.date);
 alert(date);
 },
@@ -32,9 +32,12 @@ dayOfWeek: function(date){
 let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 return days[date-1];
 },
+double: function(str){
+alert(str*str);
+},
 }
-  }
-  let today = new Date(); 
+}
+let today = new Date();
 </script>
 
 <template>
@@ -51,8 +54,10 @@ return days[date-1];
       Вывод суммы элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
       <p class="b">Вывод суммы элементов массива obj : {{ obj.x + obj.y + obj.z }} </p>
       <button class="button button1" @click="show">Узнать дату(нажатием)</button> 
-    <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
+    <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> <br>
     <button class="button button3" @click="date">Узнать день недели по числу ({{ date }})</button>
+    <button class="button" @click="double(2)">Выведет квадрат числа 2</button>
+    <button class="button" @click="double(3)">Выведет квадрат числа 3</button>
   </div>
 </template>
 
@@ -64,7 +69,7 @@ header {
     background-color: #000000; 
     border-radius: 8px;
     border: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
