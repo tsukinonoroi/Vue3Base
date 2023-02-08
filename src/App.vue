@@ -4,6 +4,8 @@
 	return {
 		name: 'Phantom',
 		surn: 'assassin',
+    attr: 'pa.jpg',
+    text: 'page',
 	}
 }
   }
@@ -14,7 +16,9 @@
 		<h1> I'm doing vue project </h1>
 	</div>
   <br>
+  <img :src="attr">
   <div> <p> Hello, my name is {{ name }} {{ surn }}</p>
+    <p>What about <a href="page.html"> me? </a></p>
   </div>
 </template>
 
