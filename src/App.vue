@@ -14,7 +14,10 @@
     arr1: ['x', 'y', 'z'], 
     arr2: [1, 2, 3], 
     obj: {x: 1, y: 2, z: 3},
-    text: 'hellooooooo iwannafly'
+    text: 'hellooooooo iwannafly',
+    date: '4',
+    text1: 'привет',
+
 	}
 },
 methods: { 
@@ -24,7 +27,7 @@ methods: {
  summ: function() {
   alert(this.num1 + this.num2)
  },
-data: function(){
+ data: function(){
 let date = this.dayOfWeek(this.date);
 alert(date);
 },
@@ -35,9 +38,15 @@ return days[date-1];
 double: function(str){
 alert(str*str);
 },
+change: function(){
+		this.text1 = 'привет';
+	},
+  change2: function(){
+    this.text1 = 'делаю аип в 10 вечера'
+  },
 }
-}
-let today = new Date();
+  }
+  let today = new Date(); 
 </script>
 
 <template>
@@ -58,6 +67,10 @@ let today = new Date();
     <button class="button button3" @click="date">Узнать день недели по числу ({{ date }})</button>
     <button class="button" @click="double(2)">Выведет квадрат числа 2</button>
     <button class="button" @click="double(3)">Выведет квадрат числа 3</button>
+    <p> {{ text1 }} </p>
+    <button @click="change">text</button>
+    <button class="button" @click="change">привет</button>
+    <button class="button" @click="change2">делаю аип в 10 вечера</button>
   </div>
 </template>
 
