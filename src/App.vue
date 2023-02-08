@@ -83,6 +83,8 @@ change: function(){
     <button class="button" @click="change">привет</button>
     <button class="button" @click="change2">делаю аип в 10 вечера</button>
     <button @click="change3">Меняем значение cost на 20</button>
+    <a class="inline-link-1" href="https://vk.com/playboiibunny" onclick="event.preventDefault()">Не сработает</a>
+    <a @click.once="shor">Сработает один раз</a>
   </div>
 </template>
 
