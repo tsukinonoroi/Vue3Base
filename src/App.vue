@@ -23,9 +23,17 @@ methods: {
  },
  summ: function() {
   alert(this.num1 + this.num2)
- }
+ },
+ data: function(){
+let date = this.dayOfWeek(this.date);
+alert(date);
+},
+dayOfWeek: function(date){
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+return days[date-1];
+},
 }
-}
+  }
   let today = new Date(); 
 </script>
 
@@ -44,6 +52,7 @@ methods: {
       <p class="b">Вывод суммы элементов массива obj : {{ obj.x + obj.y + obj.z }} </p>
       <button class="button button1" @click="show">Узнать дату(нажатием)</button> 
     <button class="button button2" @mouseenter="show"> Узнать дату(навестись)</button> 
+    <button class="button button3" @click="date">Узнать день недели по числу ({{ date }})</button>
   </div>
 </template>
 
@@ -52,7 +61,7 @@ header {
   line-height: 1.5;
 }
 .button {
-    background-color: #03f2ea; 
+    background-color: #000000; 
     border-radius: 8px;
     border: none;
     color: rgb(0, 0, 0);
@@ -76,6 +85,11 @@ header {
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color:rgb(245, 12, 160)
+}
+.button3 {
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(44, 13, 216)
 }
 .b {
   font-size:medium;
