@@ -2,8 +2,8 @@
   export default {
     data() {
 	return {
-		name: 'Edem',
-		surn: 'Seytumerov',
+		name: 'Phantom',
+		surn: 'assassin',
 	}
 }
   }
@@ -27,7 +27,7 @@ p {
   font-size: large;
   letter-spacing: 3.5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
-  color: rgb(154, 155, 255);
+  color: rgb(127, 129, 252);
 }
 .logo {
   display: block;
