@@ -15,8 +15,15 @@
     arr2: [1, 2, 3], 
     obj: {x: 1, y: 2, z: 3},
 	}
+},
+methods: { 
+ show: function() { 
+  alert(today); 
+ }
 }
   }
+  let today = new Date();   
+
 </script>
 
 <template>
