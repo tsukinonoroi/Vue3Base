@@ -14,7 +14,7 @@
 		<h1> I'm doing vue project </h1>
 	</div>
   <br>
-  <div> <p> {{ name }} {{ surn }}</p>
+  <div> <p> Hello, my name is {{ name }} {{ surn }}</p>
   </div>
 </template>
 
