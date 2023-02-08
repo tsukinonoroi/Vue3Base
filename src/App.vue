@@ -21,8 +21,7 @@
     amount: 9000,
     visible: true,
     visible1: false,
-    hidden: true,
-    hidden1: false,
+  
 
 	}
 },
@@ -91,8 +90,7 @@ change: function(){
     <a @click.once="shor">Сработает один раз</a>
     <p v-if="visible">Показан</p>
     <p v-if="visible1">Не показан</p>
-    <p v-if="hidden">Phantomka</p>
-    <p v-if="!hidden1">Dota</p>
+  
   </div>
 </template>
 
