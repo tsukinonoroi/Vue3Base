@@ -17,7 +17,14 @@
     text: 'hellooooooo iwannafly',
     date: '4',
     text1: 'привет',
+    cost: 200500,
+    amount: 9000,
 
+	}
+},
+computed: {
+	price: function() {
+		return this.cost *  this.amount;
 	}
 },
 methods: { 
@@ -44,8 +51,11 @@ change: function(){
   change2: function(){
     this.text1 = 'делаю аип в 10 вечера'
   },
+  change3: function(){
+    this.cost = '50'
+  },
 }
-  }
+}
   let today = new Date(); 
 </script>
 
@@ -57,6 +67,7 @@ change: function(){
   <br>
   <img :src="attr">
   <div> <p> Hello, i'm {{ name }} {{ surn }}</p>
+    <p>Значение cost = {{ cost }}, Прайс = {{ price }}</p>
     <p>What about <a href="page.html">me?</a></p> <br>
     <p class="sc">Квадрат числа num = {{num*num}}, А сумма чисел num1,num2,num3 = {{num1+num2+num3}}.</p>
     <p class="sc"> Вывод каждой буквы из массива по абзацам: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br>  
@@ -71,6 +82,7 @@ change: function(){
     <button @click="change">text</button>
     <button class="button" @click="change">привет</button>
     <button class="button" @click="change2">делаю аип в 10 вечера</button>
+    <button @click="change3">Меняем значение cost на 10</button>
   </div>
 </template>
 
