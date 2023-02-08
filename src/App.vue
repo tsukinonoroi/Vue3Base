@@ -3,13 +3,16 @@
     data() {
 	return {
 		name: 'Phantom',
-		surn: 'assassin',
+		surn: 'Assassin',
     attr: 'pa.jpg',
     text: 'page',
+		href: 'page.html',
     num: 5,
     num1: 1,
 		num2: 2,
 		num3: 3,
+    arr1: ['x', 'y', 'z'], 
+    arr2: [1, 2, 3], 
 	}
 }
   }
@@ -21,9 +24,11 @@
 	</div>
   <br>
   <img :src="attr">
-  <div> <p> Hello, my name is {{ name }} {{ surn }}</p>
-    <p>What about <a href="page.html"> me? </a></p>
-    <p class="sc">Квадрат свойства num равен "{{num*num}}", А сумма num1,num2,num3 равна "{{num1+num2+num3}}".</p>
+  <div> <p> Hello, i'm {{ name }} {{ surn }}</p>
+    <p>What about <a href="page.html">me?</a></p> <br>
+    <p class="sc">Квадрат числа num = {{num*num}}, А сумма чисел num1,num2,num3 = {{num1+num2+num3}}.</p>
+    <p class="sc"> Вывод каждой буквы из массива по абзацам: <br> {{arr1[0]}} <br> {{arr1[1]}} <br> {{arr1[2]}} <br>  
+      Вывод суммы элементов второго массива : {{arr2[0] + arr2[1] + arr2[2]}}</p>
   </div>
 </template>
 
@@ -31,12 +36,17 @@
 header {
   line-height: 1.5;
 }
+.sc {
+  font-size: medium;
+ color: rgb(48, 113, 255);
+ font-style: italic;
+}
 p {
-  line-height: 3;
+  line-height: 1.4;
   font-size: large;
-  letter-spacing: 3.5px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
-  color: rgb(127, 129, 252);
+  letter-spacing: 2px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(205, 98, 216);
 }
 .logo {
   display: block;
