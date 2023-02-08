@@ -1,18 +1,33 @@
 <script>
   export default {
-	  name: 'App',
+    data() {
+	return {
+		name: 'Edem',
+		surn: 'Seytumerov',
+	}
+}
   }
 </script>
 
 <template>
   <div>
-		<h1> I'm doing vue-project </h1>
+		<h1> I'm doing vue project </h1>
 	</div>
+  <br>
+  <div> <p> {{ name }} {{ surn }}</p>
+  </div>
 </template>
 
 <style >
 header {
   line-height: 1.5;
+}
+p {
+  line-height: 3;
+  font-size: large;
+  letter-spacing: 3.5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+  color: rgb(154, 155, 255);
 }
 .logo {
   display: block;
