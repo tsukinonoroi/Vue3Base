@@ -52,7 +52,7 @@ change: function(){
     this.text1 = 'делаю аип в 10 вечера'
   },
   change3: function(){
-    this.cost = '50'
+    this.cost = '20'
   },
 }
 }
@@ -82,7 +82,7 @@ change: function(){
     <button @click="change">text</button>
     <button class="button" @click="change">привет</button>
     <button class="button" @click="change2">делаю аип в 10 вечера</button>
-    <button @click="change3">Меняем значение cost на 10</button>
+    <button @click="change3">Меняем значение cost на 20</button>
   </div>
 </template>
 
