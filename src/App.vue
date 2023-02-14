@@ -32,6 +32,7 @@
     age: 18,
     vue25: true,
     items: [1, 2, 3, 4, 5],
+    arr: ['Seytumerov', 'Edem', 'Rustemovich'],
 	
 	}
 },
@@ -161,6 +162,7 @@ change: function(){
     <div class="r" v-for="elem in items">{{ elem*elem }}</div>
     <br>
     <ul v-for="elem in items">{{ elem }}</ul>
+    <ul v-for="(elem, key) in arr"> {{ key }} {{ elem }}</ul>
   </div>
     
   </div>
