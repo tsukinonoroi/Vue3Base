@@ -32,7 +32,7 @@
     age: 18,
     vue25: true,
     items: [-1, -2, -3, -4, -5],
-    arr: ['Seytumerov', 'Edem', 'Rustemovich'],
+    /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
         {href: '1.html', text: 'goat'},
@@ -53,7 +53,30 @@
 				name: 'product3',
 			},
 		  ]
-	}
+	} 
+}, */
+arr: ['a', 'c', 'd'],
+    }
+  },
+  methods: {
+    add: function() {
+		  this.arr.push('b');
+  },
+    delFirst: function() {
+      this.arr.shift();
+  },
+    delLast: function() {
+      this.arr.pop();
+  },
+    delSecondToLast: function() {
+      this.arr.splice(-2, 1);
+  },
+    sortArr: function() {
+      this.arr.sort();
+  },
+    reverseOrder: function() {
+      this.arr.reverse();
+  }
 },
 computed: {
 	price: function() {
@@ -227,6 +250,17 @@ change: function(){
 <ul v-for="smh in products" :key="smh.id">		
 	<li>{{ smh.name }}</li>		
 	</ul>
+  <li>{{ smh.name }}</li>
+
+  <button class="button" @click.once="add">Задание 1</button>
+  <button class="button" @click.once="delFirst">Задание 2</button>
+  <button class="button" @click.once="delLast">Задание 3</button>
+  <button class="button" @click.once="delSecondToLast">Задание 4</button>
+  <button class="button" @click.once="sortArr">Задание 5</button>
+  <button class="button" @click.once="reverseOrder">Задание 6</button>
+  <ul v-for="elem in arr">
+    <li>{{ elem }}</li>
+  </ul><br>
 </template>
 
 <style >
