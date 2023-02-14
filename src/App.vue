@@ -222,6 +222,7 @@ change: function(){
       <td>{{ product.quantity }}</td>
     </tr>
   </table>
+  <p v-for="num in 30">{{ num }}&nbsp;</p>
   </div>
 </template>
 
