@@ -30,6 +30,7 @@
     seytumerov: true,
     day: "Вторник", 
     age: 18,
+    vue25: true,
 	}
 },
 computed: {
@@ -50,6 +51,9 @@ methods: {
   hide2: function() {
 		this.visible = true;
 	},
+  hide3: function(){
+  this.vue25 = false;
+  },
  data: function(){
 let date = this.dayOfWeek(this.date);
 alert(date);
@@ -123,15 +127,15 @@ change: function(){
     <p v-if="hidden">Phantomka</p>
     <p v-if="!hidden1">Dota</p>
     <p v-if="visible">ilya rudov my friend no????????</p>
-    <button @click="hide">Убрать абзац</button>
+    <button class="button" @click="hide">Убрать абзац</button>
 	  <p v-if="visible">text</p>
-    <button @click="hide2">Вернуть абзац</button>
+    <button class="button" @click="hide2">Вернуть абзац</button>
 	  <p v-if="visible">text</p>
-    <button @click="toggle1">toggle1</button>
+    <button class="button" @click="toggle1">toggle1</button>
 	  <p v-if="vue20_1">google)</p>
-    <button @click="toggle2">toggle2</button>
+    <button class="button" @click="toggle2">toggle2</button>
 	  <p v-if="vue20_2">CS</p>
-    <button @click="toggle3">toggle3</button>
+    <button class="button" @click="toggle3">toggle3</button>
 	  <p v-if="vue20_3">CEPU</p>
     <p class="gfg" v-if="seytumerov">переменная в которой хранится этот текст - моя фамилия</p>
 	<p v-else>---</p>
@@ -145,6 +149,12 @@ change: function(){
     <p v-if="age <= 18">Подросток</p>
     <p v-else-if="19 < age && age < 25">Молодой человек</p>
     <p v-else="age > 26">Мужчина</p>
+    <div v-if="vue25">
+      <button class="button" @click="hide3">спрячь быстра</button>
+    <p>aaaaa</p>
+    <p>bbbbs</p>
+    <p>gfgfdsfsafsb</p>
+  </div>
     
   </div>
 </template>
@@ -155,7 +165,7 @@ header {
 }
 .button {
     background-color: #000000; 
-    border-radius: 8px;
+    border-radius: 16px;
     border: none;
     color: rgb(255, 0, 0);
     padding: 16px 32px;
