@@ -34,7 +34,28 @@
     items: [1, 2, 3, 4, 5],
     arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
-	
+    hrefs: [
+        {href: '1.html', text: 'goat'},
+        {href: '2.html', text: 'shyne'},
+        {href: '3.html', text: 'browdy'},
+		  ],
+      products: [
+        {
+          name: 'product1',
+          price: 100,
+          quantity: 5
+        },
+        {
+          name: 'product2',
+          price: 200,
+          quantity: 4
+        },
+        {
+          name: 'product3',
+          price: 300,
+          quantity: 3
+        },
+		  ]
 	}
 },
 computed: {
@@ -191,6 +212,16 @@ change: function(){
   <ul v-for="elem in items">
     <li>{{ elem }}</li>
   </ul>
+  <ul v-for="smh in hrefs">
+    <li><a href="{{ smh.href }}">{{ smh.text }}</a></li>
+  </ul>
+  <table v-for="product in products">
+    <tr>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.quantity }}</td>
+    </tr>
+  </table>
   </div>
 </template>
 
