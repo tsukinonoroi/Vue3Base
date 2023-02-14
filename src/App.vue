@@ -171,6 +171,7 @@ change: function(){
   color: yellowgreen;
   background-color: black;
   opacity: 99,99%;
+  font-weight: 100;
 }
 ul {
   color:royalblue
