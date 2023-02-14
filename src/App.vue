@@ -40,21 +40,18 @@
         {href: '3.html', text: 'browdy'},
 		  ],
       products: [
-        {
-          name: 'product1',
-          price: 100,
-          quantity: 5
-        },
-        {
-          name: 'product2',
-          price: 200,
-          quantity: 4
-        },
-        {
-          name: 'product3',
-          price: 300,
-          quantity: 3
-        },
+      {
+				id: 1,
+				name: 'product1',
+			},
+			{
+				id: 2,
+				name: 'product2',
+			},
+			{
+				id: 3,
+				name: 'product3',
+			},
 		  ]
 	}
 },
@@ -227,7 +224,9 @@ change: function(){
   <div v-for="item in items">		
 <p v-if="item >= 0">{{ item }}&nbsp;</p>		
 </div>
-
+<ul v-for="smh in products" :key="smh.id">		
+	<li>{{ smh.name }}</li>		
+	</ul>
 </template>
 
 <style >
