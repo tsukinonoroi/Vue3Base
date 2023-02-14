@@ -26,6 +26,7 @@
     vue20_1: true,
     vue20_2: true,
     vue20_3: true,
+    vue21_1: true,
 	}
 },
 computed: {
@@ -78,6 +79,9 @@ change: function(){
   toggle3: function() {
 	this.vue20_3 = !this.vue20_3;
   },
+  toggle1: function() {
+	this.vue21_1 = !this.vue21_1;
+  },
 }
 }
   let today = new Date(); 
@@ -107,6 +111,8 @@ change: function(){
     <button class="button" @click="change">привет</button>
     <button class="button" @click="change2">делаю аип в 10 вечера</button>
     <button @click="change3">Меняем значение cost на 20</button>
+    <button @click="toggle1">
+		{{ vue21_1 ? 'hide' : 'show' }} </button>
     <a class="inline-link-1" href="https://vk.com/playboiibunny" onclick="event.preventDefault()">Не сработает</a>
     <a @click.once="shor">Сработает один раз</a>
     <p v-if="visible">Показан</p>
@@ -119,11 +125,12 @@ change: function(){
     <button @click="hide2">Вернуть абзац</button>
 	  <p v-if="visible">text</p>
     <button @click="toggle1">toggle1</button>
-	  <p v-if="vue20_1">Dota</p>
+	  <p v-if="vue20_1">google)</p>
     <button @click="toggle2">toggle2</button>
 	  <p v-if="vue20_2">CS</p>
     <button @click="toggle3">toggle3</button>
 	  <p v-if="vue20_3">CEPU</p>
+    
   </div>
 </template>
 
