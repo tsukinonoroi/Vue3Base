@@ -37,6 +37,12 @@ methods: {
  summ: function() {
   alert(this.num1 + this.num2)
  },
+ hide: function() {
+		this.visible = false;
+	},
+  hide2: function() {
+		this.visible = true;
+	},
  data: function(){
 let date = this.dayOfWeek(this.date);
 alert(date);
@@ -92,6 +98,7 @@ change: function(){
     <p v-if="visible1">Не показан</p>
     <p v-if="hidden">Phantomka</p>
     <p v-if="!hidden1">Dota</p>
+    <p v-if="visible">ilya rudov my friend no????????</p>
   </div>
 </template>
 
