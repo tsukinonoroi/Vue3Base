@@ -29,6 +29,7 @@
     vue21_1: true,
     seytumerov: true,
     day: "Вторник", 
+    age: 18,
 	}
 },
 computed: {
@@ -141,6 +142,9 @@ change: function(){
     <p class="day" v-if="day === 'Пятница'">Пятница</p>
     <p class="day" v-if="day === 'Суббота'">Суббота</p>
     <p class="day" v-if="day === 'Воскресенье'">Воскресенье</p>
+    <p v-if="age <= 18">Подросток</p>
+    <p v-else-if="19 < age && age < 25">Молодой человек</p>
+    <p v-else="age > 26">Мужчина</p>
     
   </div>
 </template>
