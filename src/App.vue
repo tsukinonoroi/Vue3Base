@@ -31,7 +31,7 @@
     day: "Вторник", 
     age: 18,
     vue25: true,
-    items: [1, 2, 3, 4, 5],
+    items: [-1, -2, -3, -4, -5],
     arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -224,6 +224,10 @@ change: function(){
   </table>
   <p v-for="num in 30">{{ num }}&nbsp;</p>
   </div>
+  <div v-for="item in items">		
+<p v-if="item >= 0">{{ item }}&nbsp;</p>		
+</div>
+
 </template>
 
 <style >
