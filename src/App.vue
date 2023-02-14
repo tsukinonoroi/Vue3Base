@@ -31,6 +31,8 @@
     day: "Вторник", 
     age: 18,
     vue25: true,
+    items: [1, 2, 3, 4, 5],
+	
 	}
 },
 computed: {
@@ -154,12 +156,24 @@ change: function(){
     <p>aaaaa</p>
     <p>bbbbs</p>
     <p>gfgfdsfsafsb</p>
+    <div class="r" v-for="elem in items">{{ elem }}</div>
+    <br>
+    <div class="r" v-for="elem in items">{{ elem*elem }}</div>
+    <br>
+    <ul v-for="elem in items">{{ elem }}</ul>
   </div>
     
   </div>
 </template>
 
 <style >
+.r {
+  color: yellowgreen;
+  background-color: grey
+}
+ul {
+  color:royalblue
+}
 header {
   line-height: 1.5;
 }
