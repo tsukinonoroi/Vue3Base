@@ -33,6 +33,7 @@
     vue25: true,
     items: [1, 2, 3, 4, 5],
     arr: ['Seytumerov', 'Edem', 'Rustemovich'],
+    obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
 	
 	}
 },
@@ -165,6 +166,24 @@ change: function(){
     <ul v-for="(elem, key) in arr"> {{ key }} {{ elem }}</ul>
   </div>
     
+  <ul>
+    <li v-for="elem in obj">{{ elem }}</li>
+    </ul>
+    <br>
+    <br>
+    <ul>
+      <li v-for="(key, elem) in obj"> {{ elem }} - {{ key }}</li>
+    </ul>
+    <br>
+    <br>
+    <ul>
+      <li v-for="(key, elem, index) in obj"> {{ elem }} - {{ key }} - {{ index }}</li>
+    </ul>
+    <br>
+    <br>
+    <ul>
+      <li v-for="(key, elem, index) in obj"> {{ elem }} - {{ key }} - {{ index+1 }}</li>
+    </ul>
   </div>
 </template>
 
