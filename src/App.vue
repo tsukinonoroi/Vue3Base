@@ -23,6 +23,9 @@
     visible1: false,
     hidden: true,
     hidden1: false,
+    vue20_1: true,
+    vue20_2: true,
+    vue20_3: true,
 	}
 },
 computed: {
@@ -63,6 +66,18 @@ change: function(){
   change3: function(){
     this.cost = '20'
   },
+  toggle: function() {
+	this.visible = !this.visible;
+  },
+  toggle1: function() {
+	this.vue20_1 = !this.vue20_1;
+  },
+  toggle2: function() {
+	this.vue20_2 = !this.vue20_2;
+  },
+  toggle3: function() {
+	this.vue20_3 = !this.vue20_3;
+  },
 }
 }
   let today = new Date(); 
@@ -99,6 +114,16 @@ change: function(){
     <p v-if="hidden">Phantomka</p>
     <p v-if="!hidden1">Dota</p>
     <p v-if="visible">ilya rudov my friend no????????</p>
+    <button @click="hide">Убрать абзац</button>
+	  <p v-if="visible">text</p>
+    <button @click="hide2">Вернуть абзац</button>
+	  <p v-if="visible">text</p>
+    <button @click="toggle1">toggle1</button>
+	  <p v-if="vue20_1">Dota</p>
+    <button @click="toggle2">toggle2</button>
+	  <p v-if="vue20_2">CS</p>
+    <button @click="toggle3">toggle3</button>
+	  <p v-if="vue20_3">CEPU</p>
   </div>
 </template>
 
