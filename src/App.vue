@@ -169,7 +169,7 @@ change: function(){
 <style >
 .r {
   color: yellowgreen;
-  background-color: grey
+  background-color: black
 }
 ul {
   color:royalblue
