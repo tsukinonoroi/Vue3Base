@@ -28,6 +28,7 @@
     vue20_3: true,
     vue21_1: true,
     seytumerov: true,
+    day: "Вторник", 
 	}
 },
 computed: {
@@ -133,6 +134,13 @@ change: function(){
 	  <p v-if="vue20_3">CEPU</p>
     <p class="gfg" v-if="seytumerov">переменная в которой хранится этот текст - моя фамилия</p>
 	<p v-else>---</p>
+  <p class="day" v-if="day === 'Понедельник'">Понедельник</p>
+    <p class="day" v-if="day === 'Вторник'">Вторник</p>
+    <p class="day" v-if="day === 'Среда'">Среда</p>
+    <p class="dy" v-if="day === 'Четверг'">Четверг</p>
+    <p class="day" v-if="day === 'Пятница'">Пятница</p>
+    <p class="day" v-if="day === 'Суббота'">Суббота</p>
+    <p class="day" v-if="day === 'Воскресенье'">Воскресенье</p>
     
   </div>
 </template>
@@ -196,6 +204,10 @@ p {
 .logo {
   display: block;
   margin: 0 auto 2rem;
+}
+.day {
+  font-size: large;
+  opacity: 75%;
 }
 @media (min-width: 1024px) {
   header {
