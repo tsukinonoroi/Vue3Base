@@ -27,6 +27,7 @@
     vue20_2: true,
     vue20_3: true,
     vue21_1: true,
+    seytumerov: true,
 	}
 },
 computed: {
@@ -130,6 +131,8 @@ change: function(){
 	  <p v-if="vue20_2">CS</p>
     <button @click="toggle3">toggle3</button>
 	  <p v-if="vue20_3">CEPU</p>
+    <p class="gfg" v-if="seytumerov">переменная в которой хранится этот текст - моя фамилия</p>
+	<p v-else>---</p>
     
   </div>
 </template>
@@ -153,7 +156,11 @@ header {
     -webkit-transition-duration: 0.7s; 
     transition-duration: 0.7s;
 }
-
+.gfg{
+  font-style: initial;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: blue;
+}
 .button1 {
   font-size: medium;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
