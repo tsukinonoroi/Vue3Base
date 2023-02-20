@@ -33,6 +33,10 @@
     vue25: true,
     items: [-1, -2, -3, -4, -5],
     cssClasses: "border: 5px solid red",
+    obj: {
+        done: true,
+        selected: false,
+      },
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -262,10 +266,18 @@ change: function(){
       <li>{{ elem }}</li>
     </ul><br>
     <p :style="cssClasses">Hello</p>
+    <p :class="obj">Edemchik</p>
   </div>
 </template>
 
 <style>
+.done {
+  border: 5px solid red;
+}
+.selected {
+  color: green;
+  font-size: 10em;
+}
 red{
   color:red
 }
