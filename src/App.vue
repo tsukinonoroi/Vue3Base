@@ -91,6 +91,8 @@
       var_1: "question one (51)",
       isCtrlPressed: false,
       var_2: "you pressed control + link",
+      newItem: "",
+      items: ["a", "b", "c", "d", "e"],
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -149,6 +151,12 @@ arr: ['a', 'c', 'd'],
     },
   },  
   methods: {
+    addItemEnd: function () {
+      this.items.push(this.newItem);
+    },
+    addItemBegin: function () {
+      this.items.unshift(this.newItem);
+    },
     add: function() {
 		  this.arr.push('b');
   },
@@ -553,9 +561,21 @@ change: function(){
   >
   &nbsp;
   <p v-if="isCtrlPressed">{{ var_2 }}</p>
+  <input v-model="newItem" />
+  <button class="idid" @click="addItemEnd">add to the end</button>
+  <button class="idid" @click="addItemBegin">add to the beginning</button>
+  <ul v-for="(item, index) in items" :key="index">
+    <li>
+      {{ item }}
+    </li>
+  </ul>
 </template>
 
 <style>
+.idid {
+  background-color: lightgreen;
+  font-style: italic;
+}
 .town{
   font-style: italic;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
