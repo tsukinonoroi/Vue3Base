@@ -40,8 +40,10 @@
      obj: {
         hidden: true,
       },
-      isValid: true,
-      isDisabled: true,
+    isValid: true,
+    isDisabled: true,
+    task: "quest",
+    task_number: 1,
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -288,6 +290,15 @@ change: function(){
   <p :style="{ fontWeight: 'bold', fontStyle: 'italic', fontSize: '30px' }">
     XXXtentacion
   </p>
+  <input type="text" v-model="task" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task }}</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task.toUpperCase() }}</p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="number" v-model="task_number" />
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <p>{{ task_number ** 2 }}</p>
 
   <div class="red">
     <ul v-for="elem in arr">
