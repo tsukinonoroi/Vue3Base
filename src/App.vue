@@ -40,7 +40,8 @@
      obj: {
         hidden: true,
       },
-
+      isValid: true,
+      isDisabled: true,
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -279,6 +280,7 @@ change: function(){
   <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
   <p :class="obj">Задание 1</p>
   <p :class="{active: true, valid: false,}">Phantom</p>
+  <p :class="{ active: isValid, valid: isDisabled }">Press2pnick</p>
 
   <div class="red">
     <ul v-for="elem in arr">
@@ -291,10 +293,10 @@ change: function(){
 
 <style>
 .active {
-  border: 5px solid red;
+  border: 5px solid purple;
 }
 .valid {
-  color: green;
+  color: yellow;
 }
 p.hidden {
   display: none;
