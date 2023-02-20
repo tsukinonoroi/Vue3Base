@@ -98,6 +98,9 @@ computed: {
 	}
 },
 methods: { 
+  setDone: function () {
+      this.obj.hidden = !this.obj.hidden;
+    },
  show: function() { 
   alert(today); 
  },
@@ -275,6 +278,7 @@ change: function(){
   <button @click="setDone">{{ obj.hidden ? "show" : "hide" }} Задание 4</button><br />
   <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
   <p :class="obj">Задание 1</p>
+  <p :class="{active: true, valid: false,}">Phantom</p>
 
   <div class="red">
     <ul v-for="elem in arr">
@@ -286,6 +290,12 @@ change: function(){
 </template>
 
 <style>
+.active {
+  border: 5px solid red;
+}
+.valid {
+  color: green;
+}
 p.hidden {
   display: none;
 }
