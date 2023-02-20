@@ -37,6 +37,10 @@
         done: true,
         selected: false,
       },
+     obj: {
+        hidden: true,
+      },
+
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -63,6 +67,11 @@
 arr: ['a', 'c', 'd'],
     }
   },
+  methods: {
+    setDone: function () {
+      this.obj.hidden = !this.obj.hidden;
+    },
+  },  
   methods: {
     add: function() {
 		  this.arr.push('b');
@@ -261,6 +270,12 @@ change: function(){
   <button class="button" @click.once="delSecondToLast">Задание 4</button>
   <button class="button" @click.once="sortArr">Задание 5</button>
   <button class="button" @click.once="reverseOrder">Задание 6</button>
+   <button @click="this.obj.hidden = false">hide Задание 2</button>
+  <button @click="this.obj.hidden = true">hide Задание 3</button>
+  <button @click="setDone">{{ obj.hidden ? "show" : "hide" }} Задание 4</button><br />
+  <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+  <p :class="obj">Задание 1</p>
+
   <div class="red">
     <ul v-for="elem in arr">
       <li>{{ elem }}</li>
@@ -271,6 +286,9 @@ change: function(){
 </template>
 
 <style>
+p.hidden {
+  display: none;
+}
 .done {
   border: 5px solid red;
 }
