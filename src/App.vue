@@ -60,6 +60,10 @@
       text_array: "ghi",
       checked: true,
       languages: [],
+      choice: "what?",
+      english: true,
+      russian: false,
+      qirimtatar: false,
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -136,6 +140,21 @@ computed: {
 	}
 },
 methods: { 
+  eng: function () {
+      this.english = true;
+      this.russian = false;
+      this.qirimtatar = false;
+    },
+    rus: function () {
+      this.english = false;
+      this.russian = true;
+      this.qirimtatar = false;
+    },
+    bin: function () {
+      this.english = false;
+      this.russian = false;
+      this.qirimtatar = true;
+    },
   setDone: function () {
       this.obj.hidden = !this.obj.hidden;
     },
@@ -392,6 +411,37 @@ change: function(){
   <ul v-for="elem in languages">
     <li>{{ elem }}</li>
   </ul>
+  <p v-if="english">What is your mother tongue?</p>
+  <p v-if="russian">Какой ваш родной язык?</p>
+  <p v-if="qirimtatar">Сенинъ ана тили насыл?
+    
+  </p>
+  &nbsp;
+  <input
+    name="radio"
+    type="radio"
+    v-model="choice"
+    value="English"
+    @click="eng"
+  />
+  &nbsp;
+  <input
+    name="radio"
+    type="radio"
+    v-model="choice"
+    value="Русский"
+    @click="rus"
+  />
+  &nbsp;
+  <input
+    name="radio"
+    type="radio"
+    v-model="choice"
+    value="Крымско-татарский"
+   @click="rus"
+  />
+  &nbsp;
+  <p>{{ choice }}</p>
 </template>
 
 <style>
