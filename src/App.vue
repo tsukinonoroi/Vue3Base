@@ -58,6 +58,7 @@
       text: "abc",
       text_button: "def",
       text_array: "ghi",
+      checked: true,
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -373,6 +374,9 @@ change: function(){
       {{ elem }}
     </li>
   </ul>
+  <input type="checkbox" v-model="checked" />
+  &nbsp;
+  <p v-if="checked">{{ checked }}</p>
 </template>
 
 <style>
