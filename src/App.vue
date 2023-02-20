@@ -88,6 +88,9 @@
         2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001, 2000,
       ],
       isDisabled: false,
+      var_1: "question one (51)",
+      isCtrlPressed: false,
+      var_2: "you pressed control + link",
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -115,6 +118,29 @@ arr: ['a', 'c', 'd'],
     }
   },
   methods: {
+    lag: function () {
+      this.var_1 = this.$refs.textField.value;
+    },
+    leg: function (event) {
+      if (event.ctrlKey) {
+        this.isCtrlPressed = true;
+      }
+    },
+    handleLeftClick: function (event) {
+      if (!event.ctrlKey) {
+        this.var_2 = "left";
+      }
+    },
+    handleRightClick: function (event) {
+      if (!event.ctrlKey) {
+        this.var_2 = "right";
+      }
+    },
+    handleMiddleClick: function (event) {
+      if (!event.ctrlKey) {
+        this.var_2 = "middle";
+      }
+    },
     split_text: function () {
       this.text_array = this.text_button.split(" "); 
     },
@@ -512,6 +538,21 @@ change: function(){
   >
     {{ isDisabled ? "input is enabled" : "input is disabled" }}
   </button>
+  <input type="text" @keyup.enter="lag" ref="textField" />
+  &nbsp;
+  <p>{{ var_1 }}</p>
+  &nbsp;
+  <a
+    href="https://www.youtube.com/watch?v=Dk6TPWUM7TM"
+    @click="leg"
+    @click.left="handleLeftClick"
+    @click.right="handleRightClick"
+    @click.middle="handleMiddleClick"
+    target="_blank"
+    >quesr 2 n 3</a
+  >
+  &nbsp;
+  <p v-if="isCtrlPressed">{{ var_2 }}</p>
 </template>
 
 <style>
