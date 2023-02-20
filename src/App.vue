@@ -32,6 +32,7 @@
     age: 18,
     vue25: true,
     items: [-1, -2, -3, -4, -5],
+    cssClasses: "border: 5px solid red",
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -260,6 +261,7 @@ change: function(){
     <ul v-for="elem in arr">
       <li>{{ elem }}</li>
     </ul><br>
+    <p :style="cssClasses">Hello</p>
   </div>
 </template>
 
