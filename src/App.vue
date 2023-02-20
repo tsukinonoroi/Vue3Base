@@ -64,6 +64,7 @@
       english: true,
       russian: false,
       qirimtatar: false,
+      selected: "Выберите город",
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -440,11 +441,26 @@ change: function(){
     value="Крымско-татарский"
    @click="rus"
   />
-  &nbsp;
+ 
   <p>{{ choice }}</p>
+  <select v-model="selected">
+    <option class="town">Симферополь</option>
+    <option class="town">Евпатория</option>
+    <option class="town">Феодосия</option>
+    <option class="town">Алушта</option>
+    <option class="town">Севастополь</option>
+    <option class="town">Судак</option>
+  </select>
+
+  <p>{{ selected }}</p>
 </template>
 
 <style>
+.town{
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: lightgreen;
+}
 .active {
   border: 5px solid purple;
 }
