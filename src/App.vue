@@ -93,6 +93,8 @@
       var_2: "you pressed control + link",
       newItem: "",
       items: ["a", "b", "c", "d", "e"],
+      newItem: "",
+      items2: ["a", "b", "c", "d", "e"],
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -120,6 +122,12 @@ arr: ['a', 'c', 'd'],
     }
   },
   methods: {
+    addItemEnd: function () {
+      this.items.push(this.newItem);
+    },
+    addItemBegin: function () {
+      this.items.unshift(this.newItem);
+    },
     lag: function () {
       this.var_1 = this.$refs.textField.value;
     },
@@ -564,6 +572,14 @@ change: function(){
   <input v-model="newItem" />
   <button class="idid" @click="addItemEnd">add to the end</button>
   <button class="idid" @click="addItemBegin">add to the beginning</button>
+  <ul v-for="(item, index) in items" :key="index">
+    <li>
+      {{ item }}
+    </li>
+  </ul>
+  <input v-model="newItem" />
+  <button @click="addItemEnd">add to the end</button>
+  <button @click="addItemBegin">add to the beginning</button>
   <ul v-for="(item, index) in items" :key="index">
     <li>
       {{ item }}
