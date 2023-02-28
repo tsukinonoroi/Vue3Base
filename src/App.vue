@@ -93,6 +93,26 @@
       var_2: "you pressed control + link",
       newItem: "",
       items: ["a", "b", "c", "d", "e"],
+      users: [
+        {
+          id: 1,
+          name: "name1",
+          salary: 100,
+          age: 30,
+        },
+        {
+          id: 2,
+          name: "name2",
+          salary: 200,
+          age: 40,
+        },
+        {
+          id: 3,
+          name: "name3",
+          salary: 300,
+          age: 50,
+        },
+      ],
     /* arr: ['Seytumerov', 'Edem', 'Rustemovich'],
     obj: {Seytumerov:'100$', Edem:'200$', Rustemovich:'300$'},
     hrefs: [
@@ -119,7 +139,14 @@
 arr: ['a', 'c', 'd'],
     }
   },
-  methods: {
+  methods: 
+  
+  {
+    removeItem: function (id) {
+      this.users = this.users.filter((user) => {
+        return user.id !== id;
+      });
+    },
     lag: function () {
       this.var_1 = this.$refs.textField.value;
     },
@@ -574,9 +601,31 @@ change: function(){
       <button @click="removeItem(index)">{{ item }}</button>
     </li>
   </ul>
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+      <th>Age</th>
+      <th>Remove</th>
+    </tr>
+    <tr v-for="user in users">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.salary }}</td>
+      <td>{{ user.age }}</td>
+      <td><button @click="removeItem(user.id)">remove</button></td>
+    </tr>
+  </table>
 </template>
 
 <style>
+table {
+  background-color: lightskyblue;
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:black
+}
 .idid {
   background-color: lightgreen;
   font-style: italic;
