@@ -1,15 +1,17 @@
 <script>
 export default {
+    props: ['name', 'surn', 'age'],
     data() {
         return {
-name: "Edem Seytumerov"
         }
     }
 }
 </script>
 
 <template>
-   <p class="Edem Seytumerov">{{ name }}</p>
+   <p class="developer">{{ name }}</p>
+   <p class="developer">{{ surn }}</p>
+   <p class="developer">{{ age }}</p>
 </template>
 
 <style>
