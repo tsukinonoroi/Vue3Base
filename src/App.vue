@@ -7,7 +7,7 @@ export default {
 };
 </script>
 <template>
-   <Employee name="Edem" surn="Seytumerov" age="18" />
+  <Employee :name="['Edem','Alie','Farruh','Lilya']"/>
 </template>
 
 <style >
