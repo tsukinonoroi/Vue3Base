@@ -142,6 +142,13 @@ arr: ['a', 'c', 'd'],
   methods: 
   
   {
+    edit: function (user) {
+      user.isEdit = true;
+    },
+    save: function (user) {
+      user.isEdit = false;
+    },
+  },
     removeItem: function (id) {
       this.users = this.users.filter((user) => {
         return user.id !== id;
@@ -176,7 +183,6 @@ arr: ['a', 'c', 'd'],
     setDone: function () {
       this.obj.hidden = !this.obj.hidden;
     },
-  },  
   methods: {
     addItemEnd: function () {
       this.items.push(this.newItem);
@@ -607,14 +613,23 @@ change: function(){
       <th>Name</th>
       <th>Salary</th>
       <th>Age</th>
-      <th>Remove</th>
     </tr>
     <tr v-for="user in users">
-      <td>{{ user.id }}</td>
-      <td>{{ user.name }}</td>
-      <td>{{ user.salary }}</td>
-      <td>{{ user.age }}</td>
-      <td><button @click="removeItem(user.id)">remove</button></td>
+      <template v-if="!user.isEdit">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.salary }}</td>
+        <td>{{ user.age }}</td>
+        <td><button @click="removeItem(user.id)">remove</button></td>
+        <td><button @click="edit(user)">edit</button></td>
+      </template>
+      <template v-else>
+        <td><input v-model="user.id" /></td>
+        <td><input v-model="user.name" /></td>
+        <td><input v-model="user.salary" /></td>
+        <td><input v-model="user.age" /></td>
+        <td><button @click="save(user)">save</button></td>
+      </template>
     </tr>
   </table>
 </template>
