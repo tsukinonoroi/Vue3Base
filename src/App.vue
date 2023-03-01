@@ -35,9 +35,9 @@ export default {
     transition-duration: 0.4s;
 }
 .active {
-  border: 5px solid green;
+  border: 5px solid lightcyan;
 }
 .valid {
-  color: blue;
+  color: green;
 }
 </style>
