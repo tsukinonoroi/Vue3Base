@@ -17,9 +17,8 @@ export default {
 </script>
 
 <template>
-<button class="button" @click="handleName">Имя</button>
-<button class="button" @click="handleSalary">Зарплата</button>
-</template>
+  <button class="button" @click="$emit('morgen', 'Alie Asanova')">Имя</button>
+  </template>
 
 
 
