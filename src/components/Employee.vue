@@ -1,23 +1,24 @@
 <script>
 export default {
-    props: {
-        name: String, 
-        salary: Number, 
-        age: Number
-    },
+    emits: ['show', 'show1'],
     data() {
         return {
         }
+    },
+    methods: {
+        handle() {
+            this.$emit('show');
+        },
+        handle1() {
+            this.$emit('show1');
+        },
     }
 }
 </script>
 
 <template>
-<p>{{ name }} 
-<br>
-{{ salary }} 
-<br>
-{{ age }}</p>
+<button class="button" @click="handle">Python</button>
+<button class="button" @click="handle1">CPlusPlus</button>
 </template>
 
 
