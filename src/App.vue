@@ -3,9 +3,26 @@ import Employee from './components/Employee.vue'
 export default {
   data() {
     return {
-      name: 'Seytumerov Edem',
-      salary: '1000',
-      age: '18',
+      humans: [
+        {
+          id: 1,
+          name: 'Edem',
+          salary: 1000,
+          age: 18
+        },
+        {
+          id: 2,
+          name: 'Alie',
+          salary: 10000,
+          age: 18
+        },
+        {
+          id: 3,
+          name: 'Farruh',
+          salary: 30003,
+          age: 18
+        },
+      ],
     }
   },
   components: {
@@ -15,29 +32,5 @@ export default {
 </script>
 
 <template>
-<Employee :name="name" :salary="salary" :age="age"/>
+<Employee v-for="human in humans" :name="human.name" :salary="human.salary" :age="human.age" :key="human.id" />
 </template>
-
-<style >
-.button {
-    background-color: #46ace7; /* Green */
-    border-radius: 8px;
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
-}
-.active {
-  border: 5px solid lightcyan;
-}
-.valid {
-  color: green;
-}
-</style>
