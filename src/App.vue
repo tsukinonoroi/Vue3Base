@@ -3,27 +3,45 @@ import Employee from './components/Employee.vue'
 export default {
   data() {
     return {
-      
+      developers: [
+        {
+          id: 1,
+          name: 'Edem',
+          surn: 'Seytumerov'
+        },
+        {
+          id: 2,
+          name: 'Alie',
+          surn: 'Asanova'
+        },
+        {
+          id: 3,
+          name: 'Farruh',
+          surn: 'Ybiica'
+        },
+      ],
     }
   },
   components: {
     Employee
   },
   methods: {
-    developerName(name) {
-      alert(name);
-    },
-    developerSalary(salary) {
-      alert(salary)
+    remove(id) {
+      this.developers = this.developers.filter((developer) => {
+        return developer.id !== id;
+      })
     }
   }
 }
 </script>
 
 <template>
-<Employee @morgen="developerName"/>
-<Employee @morgen="developerSalary"/>
-
+<Employee v-for   ="developer in developers"
+		:id     ="developer.id"
+		:name   ="developer.name"
+		:surn   ="developer.surn"
+		@remove ="remove"
+		:key    ="developer.id"/>
 </template>
 
 <style >
