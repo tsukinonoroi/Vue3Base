@@ -13,12 +13,17 @@ export default {
     developerName(name) {
       alert(name);
     },
+    developerSalary(salary) {
+      alert(salary)
+    }
   }
 }
 </script>
 
 <template>
 <Employee @morgen="developerName"/>
+<Employee @morgen="developerSalary"/>
+
 </template>
 
 <style >

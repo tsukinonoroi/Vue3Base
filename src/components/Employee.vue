@@ -6,18 +6,13 @@ export default {
         }
     },
     methods: {
-        handleName() {
-            this.$emit('morgen', 'Alie Asanova', '18001');
-        },
-        handleSalary(){
-            this.$emit('morgen1', 'Edem Seytumerov', '15999');
-        }
     }
 }
 </script>
 
 <template>
   <button class="button" @click="$emit('morgen', 'Alie Asanova')">Имя</button>
+  
   </template>
 
 
