@@ -1,6 +1,6 @@
 <script>
 export default {
-    props: ['name'],
+    props: ['name', 'salary', 'age'],
     data() {
         return {
         }
@@ -9,12 +9,16 @@ export default {
 </script>
 
 <template>
-<ul class="styled">
-    <li v-for="developer in name">{{ developer }}</li>
-</ul>
+<p>{{ name }} 
+<br>
+{{ salary }} 
+<br>
+{{ age }}</p>
 </template>
+
+
 <style>
-p,li,ul {
+p {
     font-size: 1cm;
     text-align: center;
   text-shadow:
@@ -23,11 +27,11 @@ p,li,ul {
   color: white;
   transition: all .5s;
 }
-p,li,ul:hover {
+p:hover {
     text-align: center;
     font-size: 1.2cm;
   text-shadow:
-    -1px -1px 1px rgb(122, 15, 156),
+    -1px -1px 1px rgb(252, 1, 1),
     1px -1px 1px rgb(252, 1, 1);
   color: rgb(165, 145, 238);
 }
