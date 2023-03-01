@@ -1,24 +1,24 @@
 <script>
 export default {
-    emits: ['show', 'show1'],
+    emits: ['morgen', 'morgen1'],
     data() {
         return {
         }
     },
     methods: {
-        handle() {
-            this.$emit('show');
+        handleName() {
+            this.$emit('morgen', 'Alie Asanova', '18001');
         },
-        handle1() {
-            this.$emit('show1');
-        },
+        handleSalary(){
+            this.$emit('morgen1', 'Edem Seytumerov', '15999');
+        }
     }
 }
 </script>
 
 <template>
-<button class="button" @click="handle">Python</button>
-<button class="button" @click="handle1">CPlusPlus</button>
+<button class="button" @click="handleName">Имя</button>
+<button class="button" @click="handleSalary">Зарплата</button>
 </template>
 
 

@@ -10,17 +10,17 @@ export default {
     Employee
   },
   methods: {
-    handle() {
-      alert('c++ is hard for me');
+    developerName(name) {
+      console.log(name);
     },
-    handle1(){
-      alert('i like python')
+    developerSalary(name, salary){
+console.log(name, salary);
     }
   }
 }
 </script>
 
 <template>
-<Employee @show="prikolovni" @show1="bebrusovi" />
+<Employee @show="morgen" @show1="morgen1" />
 </template>
 
